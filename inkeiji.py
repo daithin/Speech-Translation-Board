@@ -67,8 +67,8 @@ def translate_text_with_googletrans(text, source_language="en", target_language=
 def main():
     # ユーザー入力を受け取る
     record_seconds = int(input("録音秒数を入力してください（例：5）: "))
-    source_language = input("翻訳のソース言語を入力してください（例：en）: ")
-    target_language = input("翻訳のターゲット言語を入力してください（例：ja）: ")
+    source_language = input("受け取り言語を入力してください（例：en）: ")
+    target_language = input("翻訳する言語を入力してください（例：ja）: ")
 
     audio_file = record_audio(record_seconds)
     recognized_text = recognize_speech_with_whisper(audio_file)
