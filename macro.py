@@ -79,11 +79,6 @@ def main():
         
         os.remove(audio_file)
 
-    def save_history():
-        with open("conversation_history.txt", "w") as file:
-            for item in history_listbox.get(0, tk.END):
-                file.write(item + "\n")
-        print("履歴を保存しました")
 
     def swap_languages():
         # 現在の言語設定を取得
@@ -122,9 +117,6 @@ def main():
     history_listbox = tk.Listbox(root, height=10, width=50)
     history_listbox.grid(row=5, column=0, columnspan=2)
 
-    # 履歴保存ボタン
-    save_button = tk.Button(root, text="履歴を保存", command=save_history)
-    save_button.grid(row=6, column=0, columnspan=2)
 
     root.mainloop()
 
